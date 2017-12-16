@@ -27,7 +27,17 @@ var app = {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
-        this.receivedEvent('deviceready');
+      app.receivedEvent('deviceready');
+      StatusBar.overlaysWebView(false);
+      StatusBar.backgroundColorByName('black');
+      navigator.splashscreen.hide()
+
+      // Here, we redirect to the web site.
+      var targetUrl = "https://katy-hiking-trails.herokuapp.com/";
+      var bkpLink = document.getElementById("bkpLink");
+      bkpLink.setAttribute("href", targetUrl);
+      bkpLink.text = targetUrl;
+      window.location.replace(targetUrl);
     },
 
     // Update DOM on a Received Event
