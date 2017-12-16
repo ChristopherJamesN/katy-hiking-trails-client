@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "KatyTrails",
+  "short_name": "KatyTrails",
+  "version": "io.cordova.hellocordova",
+  "description": "Find mainatained hiking trails in the Katy, Texas area.",
+  "author": "Chris Nady",
+  "icons": [],
+  "start_url": "index.html"
+}
