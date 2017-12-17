@@ -30,6 +30,7 @@ var app = {
       app.receivedEvent('deviceready');
       StatusBar.overlaysWebView(false);
       StatusBar.backgroundColorByName('black');
+      navigator.splashscreen.hide();
 
       // Here, we redirect to the web site.
       var targetUrl = "https://katy-hiking-trails.herokuapp.com/";
