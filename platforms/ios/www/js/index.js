@@ -1,22 +1,18 @@
 var app = {
     // Application Constructor
     initialize: function() {
-    this.bindEvents();
+        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    onDeviceReady: function() {
-        app.receivedEvent('deviceready');
 
-        // Here, we redirect to the web site.
-        var targetUrl = "https://katy-hiking-trails.herokuapp.com/";
-        var bkpLink = document.getElementById("bkpLink");
-        bkpLink.setAttribute("href", targetUrl);
-        bkpLink.text = targetUrl;
-        window.location.replace(targetUrl);
-},
-    // Note: This code is taken from the Cordova CLI template.
+    // deviceready Event Handler
+    //
+    // Bind any cordova events here. Common events are:
+    // 'pause', 'resume', etc.
+    onDeviceReady: function() {
+        this.receivedEvent('deviceready');
+    },
+
+    // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
@@ -30,7 +26,3 @@ var app = {
 };
 
 app.initialize();
-
-//StatusBar.overlaysWebView(false);
-//StatusBar.backgroundColorByName('black');
-//navigator.splashscreen.hide();
