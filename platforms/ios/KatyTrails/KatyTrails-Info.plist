@@ -55,5 +55,7 @@
       <string>UIInterfaceOrientationPortraitUpsideDown</string>
       <string>UIInterfaceOrientationLandscapeRight</string>
     </array>
+    <key>UILaunchStoryboardName</key>
+    <string>CDVLaunchScreen</string>
   </dict>
 </plist>
