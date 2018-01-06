@@ -12,7 +12,7 @@ var app = {
         StatusBar.backgroundColorByName('black');
 
         // Here, we redirect to the web site.
-        var targetUrl = "https://katy-hiking-trails.herokuapp.com/";
+        var targetUrl = "https://katy-hiking-trails-react.herokuapp.com/";
         var bkpLink = document.getElementById("bkpLink");
         bkpLink.setAttribute("href", targetUrl);
         bkpLink.text = targetUrl;
@@ -32,7 +32,3 @@ var app = {
 };
 
 app.initialize();
-
-//StatusBar.overlaysWebView(false);
-//StatusBar.backgroundColorByName('black');
-//navigator.splashscreen.hide();
