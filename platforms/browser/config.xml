@@ -15,5 +15,5 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <allow-navigation href="https://katy-hiking-trails.herokuapp.com/" />
+    <allow-navigation href="https://katy-hiking-trails.fly.dev/" />
 </widget>

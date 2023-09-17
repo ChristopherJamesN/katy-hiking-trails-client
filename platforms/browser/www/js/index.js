@@ -17,39 +17,43 @@
  * under the License.
  */
 var app = {
-    // Application Constructor
-    initialize: function() {
-        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-    },
+  // Application Constructor
+  initialize: function () {
+    document.addEventListener(
+      'deviceready',
+      this.onDeviceReady.bind(this),
+      false
+    );
+  },
 
-    // deviceready Event Handler
-    //
-    // Bind any cordova events here. Common events are:
-    // 'pause', 'resume', etc.
-    onDeviceReady: function() {
-      app.receivedEvent('deviceready');
-      StatusBar.overlaysWebView(false);
-      StatusBar.backgroundColorByName('black');
+  // deviceready Event Handler
+  //
+  // Bind any cordova events here. Common events are:
+  // 'pause', 'resume', etc.
+  onDeviceReady: function () {
+    app.receivedEvent('deviceready');
+    StatusBar.overlaysWebView(false);
+    StatusBar.backgroundColorByName('black');
 
-      // Here, we redirect to the web site.
-      var targetUrl = "https://katy-hiking-trails.herokuapp.com/";
-      var bkpLink = document.getElementById("bkpLink");
-      bkpLink.setAttribute("href", targetUrl);
-      bkpLink.text = targetUrl;
-      window.location.replace(targetUrl);
-    },
+    // Here, we redirect to the web site.
+    var targetUrl = 'https://katy-hiking-trails.fly.dev/';
+    var bkpLink = document.getElementById('bkpLink');
+    bkpLink.setAttribute('href', targetUrl);
+    bkpLink.text = targetUrl;
+    window.location.replace(targetUrl);
+  },
 
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+  // Update DOM on a Received Event
+  receivedEvent: function (id) {
+    var parentElement = document.getElementById(id);
+    var listeningElement = parentElement.querySelector('.listening');
+    var receivedElement = parentElement.querySelector('.received');
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
+    listeningElement.setAttribute('style', 'display:none;');
+    receivedElement.setAttribute('style', 'display:block;');
 
-        console.log('Received Event: ' + id);
-    }
+    console.log('Received Event: ' + id);
+  },
 };
 
 app.initialize();
